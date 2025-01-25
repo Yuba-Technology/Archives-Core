@@ -94,6 +94,7 @@ module.exports = {
         "unicorn/prefer-query-selector": "off",
         "unicorn/prefer-spread": "off",
         "unicorn/prefer-string-replace-all": "off",
+        "unicorn/prefer-top-level-await": "off",
         "unicorn/prevent-abbreviations": "off",
         "@typescript-eslint/no-unused-vars": [
             "error",
