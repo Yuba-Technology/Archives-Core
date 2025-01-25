@@ -2,9 +2,21 @@
     "name": "archives-core",
     "version": "0.0.0",
     "description": "The core component of Archives",
-    "main": "dist/index.js",
-    "module": "dist/index.esm.js",
-    "types": "dist/index.d.ts",
+    "exports": {
+        "node": {
+            "import": "./dist/node/esm/index.js",
+            "require": "./dist/node/cjs/index.js",
+            "types": "./dist/node/index.d.ts"
+        },
+        "browser": {
+            "import": "./dist/browser/esm/index.js",
+            "require": "./dist/browser/cjs/index.js",
+            "types": "./dist/browser/index.d.ts"
+        }
+    },
+    "main": "./dist/node/cjs/index.js",
+    "module": "./dist/browser/esm/index.js",
+    "types": "./dist/node/index.d.ts",
     "files": [
         "dist"
     ],
@@ -33,6 +45,7 @@
     "devDependencies": {
         "@rollup/plugin-commonjs": "^28.0.2",
         "@rollup/plugin-node-resolve": "^16.0.0",
+        "@rollup/plugin-replace": "^6.0.2",
         "@rollup/plugin-terser": "^0.4.4",
         "@rollup/plugin-typescript": "^12.1.2",
         "@types/jest": "^29.5.14",
@@ -52,5 +65,8 @@
         "tslib": "^2.8.1",
         "typescript": "^5.7.3",
         "xo": "^0.60.0"
+    },
+    "dependencies": {
+        "uuid": "^11.0.5"
     }
 }

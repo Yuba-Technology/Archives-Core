@@ -1,9 +1,4 @@
 const BASICS = {
-    // *.node.test.ts(x) *.test.ts(x)
-    testMatch: [
-        "<rootDir>/src/**/*.node.test.(ts|tsx)",
-        "<rootDir>/src/**/*.test.(ts|tsx)",
-    ],
     preset: "ts-jest",
     moduleNameMapper: {
         "^@/(.*)$": "<rootDir>/src/$1",
@@ -15,11 +10,27 @@ module.exports = {
         {
             displayName: "node",
             testEnvironment: "node",
+            globals: {
+                RUNTIME: "node",
+            },
+            // *.node.test.ts(x), *.test.ts(x)
+            testMatch: [
+                "<rootDir>/src/**/*.node.test.(ts|tsx)",
+                "<rootDir>/src/**/*(?<!browser).test.(ts|tsx)",
+            ],
             ...BASICS,
         },
         {
             displayName: "browser",
             testEnvironment: "jsdom",
+            globals: {
+                RUNTIME: "browser",
+            },
+            // *.browser.test.ts(x), *.test.ts(x)
+            testMatch: [
+                "<rootDir>/src/**/*.browser.test.(ts|tsx)",
+                "<rootDir>/src/**/*(?<!node).test.(ts|tsx)",
+            ],
             ...BASICS,
         },
     ],

@@ -159,4 +159,7 @@ module.exports = {
             },
         },
     },
+    globals: {
+        RUNTIME: "readonly",
+    },
 };
