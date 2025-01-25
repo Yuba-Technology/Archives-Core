@@ -1,3 +1,23 @@
+/*
+ * Rollup configuration file for Archives-Core project that handles both
+ * Node.js and browser builds.
+ *
+ * This configuration file sets up the build process using Rollup bundler.
+ *
+ * Key features:
+ * - Dual build targets: Node.js (CommonJS) and Browser (ES modules)
+ * - TypeScript compilation and type definitions generation
+ * - Source maps generation (for development)
+ * - Global constants (RUNTIME = "node"/"browser") for environment-specific code
+ * - Environment-specific optimizations
+ *
+ * Copyright (c) 2015-2025 Yuba Technology. All rights reserved.
+ * This file is a collaborative effort of the Yuba Technology team
+ * and all contributors to the Archives-Core project.
+ *
+ * Licensed under the AGPLv3 license.
+ */
+
 const typescript = require("@rollup/plugin-typescript");
 const resolve = require("@rollup/plugin-node-resolve");
 const commonjs = require("@rollup/plugin-commonjs");

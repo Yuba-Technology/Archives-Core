@@ -1,3 +1,17 @@
+/*
+ * TypeScript configuration file for Archives-Core project.
+ *
+ * This configuration file defines TypeScript compiler options and project settings.
+ *
+ * Key features:
+ * - ESNext target and module system
+ * - Strict type checking enabled
+ * - Source maps and declaration files generation
+ * - Path aliases for module resolution
+ * - Node.js module resolution strategy
+ * - Comprehensive error checking and code quality rules
+ */
+
 {
     "include": ["src/**/*"],
     "exclude": ["node_modules", "dist"],

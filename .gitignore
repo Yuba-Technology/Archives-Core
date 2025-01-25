@@ -1,3 +1,9 @@
+# Git ignore configuration file for Archives-Core project that specifies which files
+# and directories should be excluded from version control.
+#
+# Extends the default gitignore configuration file for Node.js projects.
+# See https://github.com/github/gitignore/blob/main/Node.gitignore for more details.
+
 # Logs
 logs
 *.log

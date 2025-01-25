@@ -1,4 +1,13 @@
-# http://editorconfig.org
+# EditorConfig configuration for Archives-Core project.
+# Defines consistent coding styles across different editors and IDEs.
+# See http://editorconfig.org for more details.
+#
+# Key settings:
+# - 4 spaces indentation
+# - UTF-8 encoding
+# - Unix-style line endings
+# - Trailing whitespace trimming
+# - Final newline insertion
 
 root = true
 
