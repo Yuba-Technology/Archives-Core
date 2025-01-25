@@ -15,7 +15,7 @@ const createConfig = (runtime) => ({
                 ? "dist/node/index.js"
                 : "dist/browser/index.js",
         format: runtime === "node" ? "cjs" : "es",
-        sourcemap: isDevelopment,
+        sourcemap: true,
     },
     plugins: [
         replace({
@@ -28,6 +28,7 @@ const createConfig = (runtime) => ({
             tsconfig: "./tsconfig.json",
             declaration: true,
             declarationDir: `./dist/${runtime}`,
+            declarationMap: isDevelopment,
         }),
         resolve({
             browser: runtime === "browser",
